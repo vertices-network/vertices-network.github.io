@@ -1,0 +1,47 @@
+---
+layout: page
+---
+
+<div class="post">
+  <!-- Wrapper Start -->
+  <section id="blogpost">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="block">
+            <h1>{{ page.title }}</h1>
+            <div class="post-info-wrapper">
+              <p class="italic">By <span class="bold">{{ page.author }}</span> on <span class="bold">{{ page.date | date: "%B %-d, %Y" }}</span></p>
+            </div>
+            <ul class="blog-tags">
+              {% for tag in page.meta %}
+                <i class="{{ tag.class }}">{{ tag.title }}</i>
+              {% endfor %}
+            </ul>
+            <hr />
+            <div class="blog-content">
+            <p>{{ content }}</p>
+            </div>
+            
+          </div>
+        </div><!-- .col-md-7 close -->
+      </div>
+    </div>
+  </section>
+</div>
+<div class="row center-text">
+  <ul class="social-icons social-index-page">
+    <li>
+      <i id="share_btn" class="fa fa-share-alt" alt="Share" style="color: #777";></i>
+    </li>
+    <li>
+      <a id="twitter_share" href="" target="_blank"><i class="fa fa-twitter" style="color: #00acee;"></i></a>
+      <a id="linkedin_share" href="" target="_blank"><i class="fa fa-linkedin" style="color: #0e76a8;"></i></a>
+
+    </li>
+  </ul>
+</div>
+<p class="center-text" style="padding: 30px;">
+  <a href="{{ site.baseurl }}/blog">Back to blog</a>
+</p>
+
